@@ -45,7 +45,7 @@ export const DEFAULTSTYLES = StyleSheet.create({
   title: {
     fontFamily: FONT_FAMILY_MEDIUM,
     color: '#000',
-    fontSize: SIZES.size_22,
+    fontSize: SIZES.size_20,
     textAlign: 'center',
     width: '100%',
     marginBottom: SIZES.size_14,

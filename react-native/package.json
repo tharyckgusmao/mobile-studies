@@ -1,5 +1,5 @@
 {
-    "name": "lab1",
+    "name": "Studies",
     "version": "0.0.1",
     "private": true,
     "scripts": {
@@ -39,12 +39,17 @@
         "@babel/core": "^7.12.9",
         "@babel/runtime": "^7.12.5",
         "@react-native-community/eslint-config": "^2.0.0",
+        "@types/jest": "^28.1.2",
+        "@types/react": "^18.0.14",
+        "@types/react-native": "^0.67.8",
+        "@types/react-test-renderer": "^18.0.0",
         "babel-jest": "^26.6.3",
         "eslint": "7.14.0",
         "jest": "^26.6.3",
         "metro-react-native-babel-preset": "^0.66.2",
         "plop": "^3.0.5",
-        "react-test-renderer": "17.0.2"
+        "react-test-renderer": "17.0.2",
+        "typescript": "^4.7.4"
     },
     "jest": {
         "preset": "react-native"

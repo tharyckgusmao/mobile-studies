@@ -1,4 +1,4 @@
-package com.lab1;
+package com.studies;
 
 import com.facebook.react.ReactActivity;
 import android.os.Bundle;
@@ -15,6 +15,6 @@ protected void onCreate(Bundle savedInstanceState) {
    */
   @Override
   protected String getMainComponentName() {
-    return "lab1";
+    return "Studies";
   }
 }

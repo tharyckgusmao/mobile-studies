@@ -174,9 +174,6 @@ export const CPF_TEST = 'CPF Inválido';
 export const TABS = [
   {name: 'Todos', anchor: 0},
   {name: 'Marcados', anchor: 0},
-  // {name: 'Cidade', anchor: 0},
-  // // {name: 'Profissão', anchor: 0},
-  // {name: 'Curtidas', anchor: 0},
 ];
 
 export const EVENTS = {

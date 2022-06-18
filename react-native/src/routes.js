@@ -12,6 +12,7 @@ const Stack = createSharedElementStackNavigator();
 // import {enableScreens} from 'react-native-screens';
 import {Platform} from 'react-native';
 import Roullete from './pages/Roullete/Roullete';
+import Home from './pages/Home/Home';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -21,8 +22,13 @@ export const Routes = () => {
         screenOptions={{
           gestureEnabled: false,
         }}
-        initialRouteName={'Roullete'}
+        initialRouteName={'Home'}
         detachInactiveScreens={false}>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{headerShown: false, gesturesEnabled: false}}
+        />
         <Stack.Screen
           name="Roullete"
           component={Roullete}
