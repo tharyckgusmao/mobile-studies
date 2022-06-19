@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">studies</string>
+    <string name="hint">Intervalo (min)</string>
+    <string name="error_msg">Digite o valor</string>
+    <string name="pause">Pausar</string>
+    <string name="notify">NOTIFICAR</string>
+</resources>

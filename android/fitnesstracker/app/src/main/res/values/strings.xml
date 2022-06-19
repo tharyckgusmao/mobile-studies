@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">fitnesstracker</string>
+    <string name="label_imc">IMC</string>
+    <string name="imd_dec">IMC é sigla de massa corporal que se para avaliar o peso do individuo.</string>
+    <string name="weight">Peso (kg)</string>
+    <string name="height">Altura (cm)</string>
+    <string name="calc">Calcular</string>
+    <string name="field_message">Formulario Invalido</string>
+
+    <string name="imc_severely_low_weight">Severamente abaixo do peso</string>
+    <string name="imc_very_low_weight">Muito abaixo do peso</string>
+    <string name="imc_low_weight">Abaixo do peso</string>
+    <string name="imc_normal">Normal</string>
+    <string name="imc_high_weight">Acima do peso</string>
+    <string name="imc_so_high_weight">Moderadamente Obeso</string>
+    <string name="imc_severely_high_weight">Severamente Obeso</string>
+    <string name="imc_extreme_weight">Extremamente Obeso</string>
+
+    <string name="imc_response">Imc: %1$.2f</string>
+
+</resources>
