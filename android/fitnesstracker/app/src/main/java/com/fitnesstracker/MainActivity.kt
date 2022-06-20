@@ -1,5 +1,6 @@
 package com.fitnesstracker
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
@@ -41,9 +42,13 @@ class MainActivity : AppCompatActivity() {
         rvMain.layoutManager = GridLayoutManager(this,2)
         rvMain.adapter = MainAdapter(mainItems,this, object : OnItemClickListener {;
             override fun onClick(id: Int) {
-                //Implementar  when
-                    val intent = Intent(this@MainActivity, ImcActivity::class.java );
-                startActivity(intent)
+                when(id){
+                    1 -> startActivity(Intent(this@MainActivity, ImcActivity::class.java ),
+                        ActivityOptions.makeSceneTransitionAnimation(this@MainActivity).toBundle())
+                    else -> startActivity(Intent(this@MainActivity, TmbActivity::class.java ),
+                        ActivityOptions.makeSceneTransitionAnimation(this@MainActivity).toBundle())
+                }
+
             }
         });
 

@@ -29,10 +29,10 @@ class ImcActivity : AppCompatActivity() {
         btnSend.setOnClickListener {
 
             val validForm = validate();
-            if(!validForm){
-                Toast.makeText(this,R.string.field_message,Toast.LENGTH_SHORT).show();
+            if (!validForm) {
+                Toast.makeText(this, R.string.field_message, Toast.LENGTH_SHORT).show();
 
-            }else{
+            } else {
 
                 val sHeight: String = editHeight.text.toString();
                 val sWeight: String = editWeight.text.toString();
@@ -40,23 +40,43 @@ class ImcActivity : AppCompatActivity() {
                 val height: Int = Integer.parseInt(sHeight);
                 val weight: Int = Integer.parseInt(sWeight);
 
-                val resultImc: Double = calculateImc(height,weight);
+                val resultImc: Double = calculateImc(height, weight);
 
                 var imcResponseId = imcResponse(resultImc);
 
 
-                var dialog = AlertDialog.Builder(this).setTitle(getString(R.string.imc_response,resultImc))
-                    .setMessage(imcResponseId).setPositiveButton(android.R.string.ok,
-                        { dialogInterface, i -> {
+                var dialog =
+                    AlertDialog.Builder(this).setTitle(getString(R.string.imc_response, resultImc))
+                        .setMessage(imcResponseId).setPositiveButton(android.R.string.ok,
+                            { dialogInterface, i ->
+                                {
 
-                        }
-                }).create()
+                                }
+                            }).setNegativeButton(R.string.save) { _, _ ->
+                            run {
+
+
+                                Thread {
+                                    val databaseHandler: SqlHelper = SqlHelper(this)
+                                    val calcId = databaseHandler.addItem("imc", resultImc)
+                                    runOnUiThread {
+
+                                        if (calcId > 0) {
+                                            Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT)
+                                        }
+
+                                    }
+                                }.start()
+
+                            }
+                        }.create()
 
                 dialog.show()
 
-                val inm :InputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
-                inm.hideSoftInputFromWindow(editWeight.windowToken,0)
-                inm.hideSoftInputFromWindow(editHeight.windowToken,0)
+                val inm: InputMethodManager =
+                    getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager;
+                inm.hideSoftInputFromWindow(editWeight.windowToken, 0)
+                inm.hideSoftInputFromWindow(editHeight.windowToken, 0)
 
             }
 
@@ -65,9 +85,9 @@ class ImcActivity : AppCompatActivity() {
     }
 
     @StringRes
-    private fun imcResponse(imc: Double): Int{
+    private fun imcResponse(imc: Double): Int {
 
-        return when{
+        return when {
             imc < 15 -> R.string.imc_severely_low_weight
             imc < 16 -> R.string.imc_very_low_weight
             imc < 18.5 -> R.string.imc_low_weight
@@ -80,14 +100,15 @@ class ImcActivity : AppCompatActivity() {
 
     }
 
-    private fun calculateImc(height: Int,weight: Int):Double{
-            return weight / ((height.toDouble() / 100 ) * ( height.toDouble() / 100 ))
+    private fun calculateImc(height: Int, weight: Int): Double {
+        return weight / ((height.toDouble() / 100) * (height.toDouble() / 100))
     }
+
     private fun validate(): Boolean {
         return (!editHeight.text.toString().startsWith("0") && !editWeight.text.toString()
-                .startsWith("0") && !editHeight.text.toString()
-                .isEmpty() && !editWeight.text.toString().isEmpty()
-        )
+            .startsWith("0") && !editHeight.text.toString()
+            .isEmpty() && !editWeight.text.toString().isEmpty()
+                )
     }
 
 
