@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitnesstracker">
         <activity
+            android:name=".ListCalcActivity"
+            android:exported="false" />
+        <activity
             android:name=".TmbActivity"
             android:exported="false" />
         <activity

@@ -1,18 +1,21 @@
 import {NavigationContainer} from '@react-navigation/native';
 // import {createStackNavigator} from '@react-navigation/stack';
-import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
+import {TransitionPresets} from '@react-navigation/stack';
 import * as React from 'react';
-import Calendar from './pages/Calendar/Calendar';
+import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
 import EventDetails from './pages/EventsCalendar/EventDetails';
 import EventsCalendarTest from './pages/EventsCalendar/EventsCalendarTest';
-import {TransitionPresets} from '@react-navigation/stack';
 // import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // const Stack = createNativeStackNavigator();
 const Stack = createSharedElementStackNavigator();
 // import {enableScreens} from 'react-native-screens';
 import {Platform} from 'react-native';
-import Roullete from './pages/Roullete/Roullete';
 import Home from './pages/Home/Home';
+import RopeSnap from './pages/RopeSnap/RopeSnap';
+import Roullete from './pages/Roullete/Roullete';
+import Mesh from './pages/Mesh/Mesh';
+import Naturelp from './pages/Naturelp/Naturelp';
+import CarouselParallax from './pages/CarouselParallax/CarouselParallax';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -20,7 +23,7 @@ export const Routes = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          gestureEnabled: false,
+          gestureEnabled: false
         }}
         initialRouteName={'Home'}
         detachInactiveScreens={false}>
@@ -32,6 +35,26 @@ export const Routes = () => {
         <Stack.Screen
           name="Roullete"
           component={Roullete}
+          // options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="RopeSnap"
+          component={RopeSnap}
+          // options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="Mesh"
+          component={Mesh}
+          options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="CarouselParallax"
+          component={CarouselParallax}
+          options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="Naturelp"
+          component={Naturelp}
           options={{headerShown: false, gesturesEnabled: false}}
         />
         <Stack.Screen
@@ -47,11 +70,11 @@ export const Routes = () => {
             if (otherRoute.name == 'EventsCalendar') {
               let config = {
                 id: `item.${item?.key}.photo`,
-                animation: 'move',
+                animation: 'move'
               };
               return Platform.select({
                 ios: [config],
-                android: showing ? [config] : [],
+                android: showing ? [config] : []
               });
             }
             //   }
@@ -59,7 +82,7 @@ export const Routes = () => {
           options={{
             headerShown: false,
             gesturesEnabled: false,
-            ...TransitionPresets.SlideFromRightIOS,
+            ...TransitionPresets.SlideFromRightIOS
           }}
         />
         {/* <Stack.Screen

@@ -1,0 +1,3 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-skia/libskia.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-skia/libsvg.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/react-native-skia/libskshaper.framework

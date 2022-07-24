@@ -1,4 +1,4 @@
-import {useFocusEffect, useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 import dayjs from 'dayjs';
 import React, {useState} from 'react';
 import {Dimensions, Text, useWindowDimensions, View} from 'react-native';

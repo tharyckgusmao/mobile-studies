@@ -19,5 +19,6 @@
     <string name="imc_response">Imc: %1$.2f</string>
     <string name="save">Salvar</string>
     <string name="saved">Salvo</string>
+    <string name="buscar">Buscar</string>
 
 </resources>
