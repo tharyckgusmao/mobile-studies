@@ -29,8 +29,16 @@ const routes = [
     route: 'Mesh'
   },
   {
-    title: ' 🪨 Nature LP',
+    title: '🪨 Nature LP',
     route: 'Naturelp'
+  },
+  {
+    title: '🏺 Rotate 360',
+    route: 'Rotate360'
+  },
+  {
+    title: '📔 Book Gallery',
+    route: 'BookGallery'
   }
 ];
 const Home = (props: Props) => {

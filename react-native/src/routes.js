@@ -16,6 +16,8 @@ import Roullete from './pages/Roullete/Roullete';
 import Mesh from './pages/Mesh/Mesh';
 import Naturelp from './pages/Naturelp/Naturelp';
 import CarouselParallax from './pages/CarouselParallax/CarouselParallax';
+import Rotate360 from './pages/Rotate360/Rotate360';
+import BookGallery from './pages/BookGallery/BookGallery';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -45,6 +47,16 @@ export const Routes = () => {
         <Stack.Screen
           name="Mesh"
           component={Mesh}
+          options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="BookGallery"
+          component={BookGallery}
+          options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="Rotate360"
+          component={Rotate360}
           options={{headerShown: false, gesturesEnabled: false}}
         />
         <Stack.Screen
