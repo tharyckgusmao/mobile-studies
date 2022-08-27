@@ -18,6 +18,7 @@ import Naturelp from './pages/Naturelp/Naturelp';
 import CarouselParallax from './pages/CarouselParallax/CarouselParallax';
 import Rotate360 from './pages/Rotate360/Rotate360';
 import BookGallery from './pages/BookGallery/BookGallery';
+import MemoryGame from './pages/MemoryGame/MemoryGame';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -47,6 +48,11 @@ export const Routes = () => {
         <Stack.Screen
           name="Mesh"
           component={Mesh}
+          options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="MemoryGame"
+          component={MemoryGame}
           options={{headerShown: false, gesturesEnabled: false}}
         />
         <Stack.Screen

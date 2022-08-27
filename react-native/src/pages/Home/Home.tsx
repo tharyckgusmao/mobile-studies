@@ -10,36 +10,40 @@ type Props = {};
 const routes = [
   {
     title: '🎠  Carousel Parallax',
-    route: 'CarouselParallax'
+    route: 'CarouselParallax',
   },
   {
     title: '🎯  Roulette',
-    route: 'Roullete'
+    route: 'Roullete',
   },
   {
     title: '🎫   Events',
-    route: 'EventsCalendar'
+    route: 'EventsCalendar',
   },
   {
     title: '🐍  Rope Snap',
-    route: 'RopeSnap'
+    route: 'RopeSnap',
   },
   {
     title: '💠  Mesh',
-    route: 'Mesh'
+    route: 'Mesh',
   },
   {
     title: '🪨 Nature LP',
-    route: 'Naturelp'
+    route: 'Naturelp',
   },
   {
     title: '🏺 Rotate 360',
-    route: 'Rotate360'
+    route: 'Rotate360',
   },
   {
     title: '📔 Book Gallery',
-    route: 'BookGallery'
-  }
+    route: 'BookGallery',
+  },
+  {
+    title: '🧠 Memory Game',
+    route: 'MemoryGame',
+  },
 ];
 const Home = (props: Props) => {
   const {navigate} = useNavigation();
@@ -67,12 +71,12 @@ const styles = StyleSheet.create({
   routeItem: {
     padding: SIZES.size_10,
     borderBottomColor: '#d9d9d9',
-    borderBottomWidth: 1
+    borderBottomWidth: 1,
   },
   title: {
     fontFamily: FONT_FAMILY_BOLD,
     color: '#000',
     fontSize: SIZES.size_14,
-    textTransform: 'uppercase'
-  }
+    textTransform: 'uppercase',
+  },
 });
