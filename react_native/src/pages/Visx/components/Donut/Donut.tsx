@@ -9,10 +9,8 @@ import {
   useValue,
 } from '@shopify/react-native-skia';
 import {arc, pie} from '@visx/shape';
-import {FC, useEffect, useMemo} from 'react';
+import React, {FC, useEffect, useMemo} from 'react';
 import {View} from 'react-native';
-import React from 'react';
-import {delay} from 'react-native-reanimated/lib/types/lib/reanimated2/animation/delay';
 type IDonut = {
   data: Array<{
     value: number;
