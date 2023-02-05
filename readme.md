@@ -19,6 +19,9 @@ Here are some labs and experiments with react-native and mobile native.
 ---
 
 > # React Native Skia + Visx
+> Perfomance animate intepolate paths better on IOS
+
+https://user-images.githubusercontent.com/11817448/216832975-8cdce544-0805-462f-953e-53d3277834e4.mp4
 
 
 > # Rope Snap
