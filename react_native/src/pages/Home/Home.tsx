@@ -44,6 +44,10 @@ const routes = [
     title: '🧠 Memory Game',
     route: 'MemoryGame',
   },
+  {
+    title: '📊 Skia + Visx',
+    route: 'Visx',
+  },
 ];
 const Home = (props: Props) => {
   const {navigate} = useNavigation();

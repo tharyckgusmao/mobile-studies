@@ -19,6 +19,7 @@ import CarouselParallax from './pages/CarouselParallax/CarouselParallax';
 import Rotate360 from './pages/Rotate360/Rotate360';
 import BookGallery from './pages/BookGallery/BookGallery';
 import MemoryGame from './pages/MemoryGame/MemoryGame';
+import Visx from './pages/Visx/Visx';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -26,7 +27,7 @@ export const Routes = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          gestureEnabled: false
+          gestureEnabled: false,
         }}
         initialRouteName={'Home'}
         detachInactiveScreens={false}>
@@ -88,11 +89,11 @@ export const Routes = () => {
             if (otherRoute.name == 'EventsCalendar') {
               let config = {
                 id: `item.${item?.key}.photo`,
-                animation: 'move'
+                animation: 'move',
               };
               return Platform.select({
                 ios: [config],
-                android: showing ? [config] : []
+                android: showing ? [config] : [],
               });
             }
             //   }
@@ -100,8 +101,13 @@ export const Routes = () => {
           options={{
             headerShown: false,
             gesturesEnabled: false,
-            ...TransitionPresets.SlideFromRightIOS
+            ...TransitionPresets.SlideFromRightIOS,
           }}
+        />
+        <Stack.Screen
+          name="Visx"
+          component={Visx}
+          options={{headerShown: false, gesturesEnabled: false}}
         />
         {/* <Stack.Screen
           name="EventsCalendar"
