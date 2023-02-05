@@ -104,11 +104,7 @@ export const Routes = () => {
             ...TransitionPresets.SlideFromRightIOS,
           }}
         />
-        <Stack.Screen
-          name="Visx"
-          component={Visx}
-          options={{headerShown: false, gesturesEnabled: false}}
-        />
+        <Stack.Screen name="Visx" component={Visx} />
         {/* <Stack.Screen
           name="EventsCalendar"
           component={EventsCalendar}
