@@ -48,6 +48,10 @@ const routes = [
     title: '📊 Skia + Visx',
     route: 'Visx',
   },
+  {
+    title: '🌊 Wave',
+    route: 'Wave',
+  },
 ];
 const Home = (props: Props) => {
   const {navigate} = useNavigation();

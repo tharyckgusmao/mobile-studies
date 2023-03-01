@@ -20,6 +20,7 @@ import Rotate360 from './pages/Rotate360/Rotate360';
 import BookGallery from './pages/BookGallery/BookGallery';
 import MemoryGame from './pages/MemoryGame/MemoryGame';
 import Visx from './pages/Visx/Visx';
+import Wave from './pages/Wave/Wave';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -35,6 +36,11 @@ export const Routes = () => {
           name="Home"
           component={Home}
           options={{headerShown: false, gesturesEnabled: false}}
+        />
+        <Stack.Screen
+          name="Wave"
+          component={Wave}
+          // options={{headerShown: false, gesturesEnabled: false}}
         />
         <Stack.Screen
           name="Roullete"
