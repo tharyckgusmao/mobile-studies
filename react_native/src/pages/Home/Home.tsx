@@ -52,6 +52,10 @@ const routes = [
     title: '🌊 Wave',
     route: 'Wave',
   },
+  {
+    title: '🎆 Shaders',
+    route: 'Shaders',
+  },
 ];
 const Home = (props: Props) => {
   const {navigate} = useNavigation();
