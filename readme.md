@@ -87,6 +87,11 @@ https://user-images.githubusercontent.com/11817448/216794868-a0f3d245-ec8e-4eac-
 
 https://user-images.githubusercontent.com/11817448/216794873-04b2fd6c-ca75-4570-937a-dc19de1c1dbc.mp4
 
+##
+
+> # Sin and Cos
+
+https://user-images.githubusercontent.com/11817448/233429707-4a0eb110-45b8-40a3-9f6b-86b32e7ac565.mp4
 
 
 
