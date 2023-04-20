@@ -22,6 +22,7 @@ import MemoryGame from './pages/MemoryGame/MemoryGame';
 import Visx from './pages/Visx/Visx';
 import Wave from './pages/Wave/Wave';
 import Shaders from './pages/Shaders/Shaders';
+import SinCos from './pages/SinCos/SinCos';
 
 // enableScreens(true);
 export const Routes = () => {
@@ -113,6 +114,7 @@ export const Routes = () => {
         />
         <Stack.Screen name="Visx" component={Visx} />
         <Stack.Screen name="Shaders" component={Shaders} />
+        <Stack.Screen name="SinCos" component={SinCos} />
         {/* <Stack.Screen
           name="EventsCalendar"
           component={EventsCalendar}

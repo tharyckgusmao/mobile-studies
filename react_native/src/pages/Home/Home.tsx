@@ -56,6 +56,10 @@ const routes = [
     title: '🎆 Shaders',
     route: 'Shaders',
   },
+  {
+    title: '⌒ Sin and Cos',
+    route: 'SinCos',
+  },
 ];
 const Home = (props: Props) => {
   const {navigate} = useNavigation();
