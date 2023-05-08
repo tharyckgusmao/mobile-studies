@@ -1,0 +1,1 @@
+ clang++ -pthread -std=c++17 -o main c++/00/main.cpp <- compile 
